@@ -20,9 +20,9 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     restart: always
     environment:
-      - POSTGRES_DB=${DB_NAME}
-      - POSTGRES_PASSWORD=${DJANGO_POSTGRES_PASSWORD}
-      - POSTGRES_USER=${DJANGO_POSTGRES_USER}
+      - POSTGRES_DB=${db_name}
+      - POSTGRES_PASSWORD=${db_pass}
+      - POSTGRES_USER=${db_user}
     ports:
       - 5432:5432
   api: 
