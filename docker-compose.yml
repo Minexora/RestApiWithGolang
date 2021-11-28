@@ -9,8 +9,10 @@ services:
     restart: always
     build: ./nginx
     ports:
-      - "80:80"
-      - "443:443"
+      - 80:80
+      - 443:443
+    volumes:
+      - static_volume:/code/static
     depends_on:
       - api
   db:
